@@ -7,6 +7,10 @@ export const JWTGenerate = async (payload: JwtPayload, secret: Secret, expireTim
 };
 
 // verify jwt token
-export const JWTVerify = (token: string, secret: Secret) => {
-  return jwt.verify(token, secret);
+export const JWTVerify = async (token: string, secret: Secret) => {
+  try {
+    return jwt.verify(token, secret);
+  } catch (error) {
+    return null;
+  }
 };
