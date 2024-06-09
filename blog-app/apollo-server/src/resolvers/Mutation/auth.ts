@@ -33,7 +33,7 @@ const authResolvers = {
     if (args.bio) {
       await prisma.profile.create({
         data: {
-          id: newUser.id,
+          userId: Number(newUser.id),
           bio: args.bio,
         },
       });

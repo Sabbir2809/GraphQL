@@ -24,7 +24,6 @@ export const Query = {
 
   // all post
   posts: async (parent: any, args: any, { prisma }: any) => {
-    console.log("Post:");
     return await prisma.post.findMany({
       where: {
         published: true,
