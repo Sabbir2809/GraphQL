@@ -7,7 +7,8 @@ import config from "./config";
 import { resolvers } from "./resolvers";
 import { typeDefs } from "./schema";
 import { JWTVerify } from "./utils/jwt";
-const prisma = new PrismaClient();
+
+export const prisma = new PrismaClient();
 
 type TContext = {
   prisma: PrismaClient<Prisma.PrismaClientOptions, never, DefaultArgs>;
